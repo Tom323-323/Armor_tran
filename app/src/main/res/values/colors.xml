@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#a51e25</color>
+    <color name="colorPrimaryDark">#800000</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#ffffff</color>
+    <color name="btn_color_search">#F87400</color>
+    <color name="btn_color_search_backgr">#800404</color>
+    <color name="main_back">#BA1605</color>
+
+
+    <color name="main_theme_haki">#59662a</color>
+    <color name="main_theme_haki_light">#879455</color>
+    <color name="main_theme_haki_dark">#2e3c00</color>
+    <color name="black">#000000</color>
+    <color name="btn">#59662A</color>
+    <color name="german_color_backround">#D54D5D53</color>
+    <color name="soviet_color_backround">#BDB76B</color>
+    <color name="color_stroke_viewholder">#BABAB7</color>
+    <color name="color_stroke_viewholder2">#CFCECE</color>
+
+
+
+
+
+
+</resources>

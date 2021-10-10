@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/viewHolderWeapons"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/content_background"
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:background="@drawable/view_holder_background"
+        android:transitionName="background"
+        app:layout_constraintBottom_toBottomOf="@+id/content_img_gun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/content_img_gun"
+        android:layout_width="411dp"
+        android:layout_height="236dp"
+        android:layout_marginTop="80dp"
+        android:scaleType="fitCenter"
+        android:transitionName="image_gun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_info_1" />
+
+    <TextView
+        android:transitionName="name_gun"
+        android:id="@+id/content_name_gun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="MP 38, MP 40 (Maschinenpistole)"
+        android:textAlignment="center"
+        android:scaleType="centerCrop"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/content_img_gun"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/content_img_gun"
+        app:layout_constraintTop_toBottomOf="@+id/content_img_gun" />
+
+    <TextView
+        android:id="@+id/text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:text="MP 38, MP 38/40, MP 40 (сокр. от нем. Maschinenpistole) — пистолет-пулемёт, разработанный Генрихом Фольмером на основе более раннего EMP 36 и использовавшийся в качестве личного оружия. Состоял на вооружении вермахта во время Второй мировой войны.
+
+MP 40 является модификацией пистолет-пулемёта MP 38, который, в свою очередь, был модификацией пистолета-пулемёта EMP 36, прошедшего боевые испытания в Испании[уточнить]. MP 40, как и MP 38, предназначался в первую очередь для танкистов, мотопехоты, десантников и командиров пехотных отделений. Позднее, ближе к концу войны, он стал применяться немецкой пехотой достаточно массово, хотя при этом и не имел повсеместного распространения.
+
+По мере распространения MP 40 в пехоте некоторые особенности оружия, связанные с его изначальным предназначением, такие как наличие складного плечевого упора вместо полноценного приклада и отсутствие переключателя видов огня, стали вызывать нарекания; в результате оружейником Хуго Шмайссером, работавшим на фирму C. G. Haenel[de], конкурента «Эрмы», была создана модификация MP 41, сочетавшая основные механизмы MP 40 с деревянным ложе и спусковым механизмом, в свою очередь выполненными по образу ранее разработанного самим Х. Шмайссером MP28. Однако этот вариант широкого распространения не получил и выпускался недолго (было выпущено порядка 40 тыс. штук, из которых около 26 тыс. было поставлено румынам, ещё 5-6 тыс. хорватам, остальные 8-10 тыс. поступили в части СС), причём причиной этого стало инициированное фирмой ERMA судебное разбирательство против работодателя Шмайссера по поводу незаконного копирования запатентованной ею конструкции.
+
+На вооружение вермахта MP 41 принят не был, хотя и ограниченно использовался частями Waffen SS (которые вообще зачастую имели очень разнородное, а с середины 1943 года нередко и вовсе устаревшее вооружение, так как комплектование дивизий СС ближе к концу войны велось по остаточному принципу)[уточнить], горными егерями и полицией, а также поставлялся румынам.
+
+С ним, однако, связана одна из версий о происхождении обозначения «Шмайссер» — от имевшегося на MP 41 клейма М. Р.41, Patent Schmeisser C.G.Haenel, Suhl (см. фото) — которое впоследствии было распространено и на остальные разновидности системы, — даже на MP 38 и MP 40, к созданию которых конструктор Х. Шмайссер прямого отношения не имел. На самом деле ему принадлежал лишь патент на магазин, использованный в конструкции этого оружия, и характерной формы приёмник для него с защёлкой в виде кнопки, который к тому времени давно уже не был новинкой и использовался в целом ряде иных систем, например MP28 и, в упрощённом виде, в британском ПП СТЭН. По альтернативной версии, обозначение «Шмайссер» возникло именно благодаря надписи М. Р.41 Patent Schmeisser, имевшейся на магазинах к MP 41 выпуска фирмы Haenel, идентичных по конструкции магазинам MP 38 и MP 40.
+
+Сами немцы очень педантично именуют своё оружие по присвоенным ему индексам. В специальной советской литературе времён Великой Отечественной войны их тоже совершенно правильно определяли как MP 38, MP 40 и MP 41, а MP28/II обозначали по имени его создателя, Хуго Шмайссера. В западной же литературе по стрелковому оружию, изданной в 1940—1945 годах, все тогдашние германские пистолеты-пулемёты сразу получили общее ошибочное название «система Шмайссера». Термин прижился и перекочевал в советскую литературу[5][6]."
+        app:layout_constraintEnd_toEndOf="@+id/content_name_gun"
+        app:layout_constraintStart_toStartOf="@+id/content_name_gun"
+        app:layout_constraintTop_toBottomOf="@+id/content_name_gun" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

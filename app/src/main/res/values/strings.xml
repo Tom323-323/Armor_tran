@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">t_3</string>
+    <string name="search_main">Search weapon...</string>
+
+
+    <array name="recycler_test">
+        <item>name_weapons_1</item>
+        <item>name_weapons_2</item>
+        <item>name_weapons_3</item>
+        <item>name_weapons_4</item>
+        <item>name_weapons_5</item>
+        <item>name_weapons_6</item>
+        <item>name_weapons_7</item>
+        <item>name_weapons_8</item>
+        <item>name_weapons_9</item>
+        <item>name_weapons_10</item>
+        <item>name_weapons_11</item>
+        <item>name_weapons_12</item>
+        <item>name_weapons_13</item>
+    </array>
+
+    <array name="recycler_test2">
+        <item>Калибр: 47.92 mm</item>
+        <item>Калибр: 37.912</item>
+        <item>Калибр: 27.192 мм</item>
+        <item>Калибр: 17.92</item>
+        <item>Калибр: 17.921</item>
+        <item>Калибр: 87.922</item>
+        <item>Калибр: 57.292</item>
+        <item>Калибр: 47.92</item>
+        <item>Калибр: 57.92</item>
+        <item>Калибр: 74.92</item>
+        <item>cal.44ggg55</item>
+        <item>cal.445hhh45</item>
+        <item>cal.4ttt5</item>
+        <item>cal.4ffff5</item>
+        <item>cal.4gfgg5</item>
+        <item>cal.4hhhhh5</item>
+    </array>
+
+</resources>
