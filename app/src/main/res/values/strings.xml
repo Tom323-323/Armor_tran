@@ -17,6 +17,7 @@
         <item>name_weapons_11</item>
         <item>name_weapons_12</item>
         <item>name_weapons_13</item>
+
     </array>
 
     <array name="recycler_test2">
@@ -36,6 +37,50 @@
         <item>cal.4ffff5</item>
         <item>cal.4gfgg5</item>
         <item>cal.4hhhhh5</item>
+    </array>
+
+
+    <array name="splash_screen_text_content">
+        <item>"The good people of this world are very far from being satisfied with each other and my arms are the best peacemakers."\nSamuel Colt</item>
+        <item>"Я не знаю, каким оружием будет вестись Третья мировая война, но Четвёртая — палками и камнями."\nАльберт Эйнштейн "</item>
+        <item>"С помощью доброго слова и пистолета вы можете добиться гораздо большего, чем только одним добрым словом."\nАль Капоне</item>
+        <item>"Пули меняют власть быстрее, чем выборы."\nФильм "Оружейный барон" (Lord of War)</item>
+        <item>"Главное правило торговца оружием — не быть застреленным из своего же товара"\nФильм "Оружейный барон" (Lord of War)</item>
+        <item>"Тяжесть — это хорошо. Тяжесть — это надежно. Даже если не выстрелит, таким всегда можно дать по голове."\nФильм "Большой куш" (Snatch)</item>
+        <item>"— Зачем тебе револьвер?\n— Чтобы научиться доверять людям."\nПауло Коэльо</item>
+        <item>"Забавно, не так ли, что диаметр помады точно соответствует сорок пятому калибру?"\nАлан Брэдли</item>
+        <item>"Винтовка — это первое оружие, которым ты должна научиться пользоваться. Потому что оно держит тебя на почтительном расстоянии от клиента."\nФильм "Леон" (Léon)</item>
+        <item>"…если у тебя есть винтовка, рано или поздно ты из нее выстрелишь.\nСтивен Кинг"</item>
+        <item>"— Ладно, кто ещё применяет винтовки калибра 0,308?\n— В Техасе? Охотники, охранники... домохозяйки..." Сериал "Мыслить как преступник" (Criminal minds)</item>
+        <item>"Более 550 миллионов единиц огнестрельного оружия находятся в обороте по всему миру. На 12 человек приходится одна пушка. Остается один вопрос: как вооружить остальных 11?"\nФильм "Оружейный барон" (Lord of War)</item>
+        <item>"Если воюют торговцы оружием, боеприпасы никогда не кончаются."\nФильм "Оружейный барон" (Lord of War)</item>
+        <item>"Револьвер — превосходный аргумент для джентльмена, который может завязать узлом стальную кочергу."\nArthur Conan Doyle</item>
+        <item>"Над чем бы учёные ни работали, у них всё равно получается оружие."\nКурт Воннегут</item>
+        <item>"You can't say that civilization don't advance, however, for in every war they kill you in a new way."\nWill Rogers</item>
+        <item>"The only thing you should feel shooting someone is giving back."\nStarCraft 2: Wings of Liberty</item>
+        <item>"It’s a dangerous habit, Mr Holmes, to keep a loaded revolver in the pocket of your own robe"\nArthur Conan Doyle</item>
+        <item>"Whoever comes to me with a sword is totally behind in the arms race."</item>
+        <item>"God created men. Colonel Colt made them equal."\nAmerican proverb</item>
+        <item>"… an armed society is a polite society. Manners are good when one may have to back up his acts with his life."\nRobert Anson Heinlein</item>
+        <item>"Guns don’t like jokes, they don’t forgive mistakes."\nInscriptions on firing ranges and weapons in the Soviet Army</item>
+        <item>"As long as I have a pen in my hand and a gun in my pocket, I’m not afraid of anyone."\nBenito Mussolini</item>
+        <item>"With weapons, the law is silent."\nMarcus Tullius Cicero</item>
+        <item>"Prisons and morgues are full of idiots who thought with a gunshot wound in their pockets they could do anything."\nIrvine Welsh</item>
+        <item>"A weapon is not a dog. It doesn't matter if it’s a master or a villain."</item>
+        <item>"There are no bad guns, there are bad shooters."\nMarshal of the Soviet Union</item>
+        <item>"Blame the user, blame the manufacturer, but don’t blame the gun."\nDavid Mitchell</item>
+        <item>"If you want to restrain the bad guys, arm the good guys!"\nAnne Fortier</item>
+        <item>"- Is it wise to give children a weapon?\n- I put a safety on it. What do you think I am?"\nLilyhammer</item>
+        <item>"The sound of weapons drowns out the voice of law."\nMichel de Montaigne</item>
+        <item>"In two years... I’ve been taught that you need a head to go with a barrel. Brains."</item>
+        <item>"You can’t have too many guns, you can’t have too many bullets."</item>
+        <item>"The weapon you don’t know how to use is likely to be turned against you."\nKerstin Gier</item>
+        <item>"One shot, one kill. That was the sniper's credo."</item>
+        <item>"You can love a weapon, you can dislike it, but it’s always better to have it on you."</item>
+        <item>"A weapon is really nothing without the man holding it."\nJodi Picoult</item>
+        <item>""\nBenjamin Franklin</item>
+        <item>""\n</item>
+        <item>""\n</item>
     </array>
 
 </resources>

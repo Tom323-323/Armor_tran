@@ -3,12 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/t_3/app/src/main/res/drawable/layout_bg.xml" value="0.287109375" />
+        <entry key="..\:/t_3/app/src/main/res/drawable/search_btn.xml" value="0.287109375" />
+        <entry key="..\:/t_3/app/src/main/res/drawable/srch_btn_backgr.xml" value="0.287109375" />
+        <entry key="..\:/t_3/app/src/main/res/drawable/style_rating_bar.xml" value="0.287109375" />
+        <entry key="..\:/t_3/app/src/main/res/drawable/style_rating_bar_empty.xml" value="0.287109375" />
+        <entry key="..\:/t_3/app/src/main/res/drawable/style_rating_bar_main.xml" value="0.287109375" />
         <entry key="..\:/t_3/app/src/main/res/drawable/view_holder_background.xml" value="0.287109375" />
         <entry key="..\:/t_3/app/src/main/res/layout/activity_main.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/content_layout.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/land_1.xml" value="0.275" />
+        <entry key="..\:/t_3/app/src/main/res/layout/land_2.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/land_3.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/land_4.xml" value="0.275" />
+        <entry key="..\:/t_3/app/src/main/res/layout/land_5.xml" value="0.275" />
+        <entry key="..\:/t_3/app/src/main/res/layout/land_6.xml" value="0.275" />
+        <entry key="..\:/t_3/app/src/main/res/layout/land_7.xml" value="0.275" />
+        <entry key="..\:/t_3/app/src/main/res/layout/land_8.xml" value="0.275" />
+        <entry key="..\:/t_3/app/src/main/res/layout/recyclerview_weapons.xml" value="0.275" />
+        <entry key="..\:/t_3/app/src/main/res/layout/splash_screen.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/view_holder.xml" value="0.275" />
       </map>
     </option>
