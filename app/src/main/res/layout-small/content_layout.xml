@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/content_background"
         android:layout_width="match_parent"
-        android:layout_height="265dp"
+        android:layout_height="190dp"
         android:background="@drawable/view_holder_background"
         android:transitionName="background"
         app:layout_constraintBottom_toBottomOf="@+id/content_img_gun"
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/content_img_gun"
-        android:layout_width="411dp"
-        android:layout_height="236dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_marginTop="80dp"
         android:scaleType="fitCenter"
         android:transitionName="image_gun"
@@ -37,7 +37,7 @@
         android:id="@+id/content_name_gun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:text="MP 38, MP 40 (Maschinenpistole)"
         android:textAlignment="center"
         android:scaleType="centerCrop"
@@ -52,9 +52,9 @@
         android:id="@+id/text_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
         android:text="MP 38, MP 38/40, MP 40 (сокр. от нем. Maschinenpistole) — пистолет-пулемёт, разработанный Генрихом Фольмером на основе более раннего EMP 36 и использовавшийся в качестве личного оружия. Состоял на вооружении вермахта во время Второй мировой войны.
 
 MP 40 является модификацией пистолет-пулемёта MP 38, который, в свою очередь, был модификацией пистолета-пулемёта EMP 36, прошедшего боевые испытания в Испании[уточнить]. MP 40, как и MP 38, предназначался в первую очередь для танкистов, мотопехоты, десантников и командиров пехотных отделений. Позднее, ближе к концу войны, он стал применяться немецкой пехотой достаточно массово, хотя при этом и не имел повсеместного распространения.
