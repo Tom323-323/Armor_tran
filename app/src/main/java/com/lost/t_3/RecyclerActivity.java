@@ -74,15 +74,12 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
         mdata.add(new WeaponsContent(R.drawable.img_info_1));
         mdata.add(new WeaponsContent(R.drawable.img_ger_main));
         mdata.add(new WeaponsContent(R.drawable.img_soviet_main));
-
     }
 
     private void initViews() {
         recyclerView = findViewById(R.id.recyclerview_weapons);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-
-
     }
 
     private void setupWeaponsAdapter(){

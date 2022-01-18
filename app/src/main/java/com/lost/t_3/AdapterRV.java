@@ -16,7 +16,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
     private int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
 
     public AdapterRV(int numbers) {
-        numbersHolder = numbers;
+                numbersHolder = numbers;
     }
 
     @NonNull
@@ -24,12 +24,9 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
     public Numberholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {    // СОЗДАНИЕ НОВОГО ХОЛДЕРА
         Context context = parent.getContext(); //контест - это объект recyclerView
         int layoutMaketHolder = R.layout.view_holder_tanks; // НАХОДИМ МАКЕТ ХОЛДЕРА
-
         LayoutInflater inflater = LayoutInflater.from(context);
-
         View view = inflater.inflate(layoutMaketHolder, parent, false); // СОЗДАНЕНИЕ VIEW ДЛЯ ПОСЛЕДУЮЩЕГО ПОМЕЩЕНИЯ ЕГО В ОБЪЕКТ NUMBERHOLDER
         Numberholder holder = new Numberholder(view);
-
         return holder;
 
     }
@@ -58,8 +55,5 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
             btnHolder = itemView.findViewById(R.id.btn_viewHolder);
 
         }
-
-
     }
-
 }
