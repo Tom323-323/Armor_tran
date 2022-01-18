@@ -5,25 +5,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="259dp"
         android:layout_weight="1"
-
-
         android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            app:srcCompat="@drawable/img_usa_main" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/img_usa_main" />
     </LinearLayout>
 
     <LinearLayout

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/t_3/app/src/main/res/drawable/btn_background.xml" value="0.3310810810810811" />
         <entry key="..\:/t_3/app/src/main/res/drawable/layout_bg.xml" value="0.287109375" />
         <entry key="..\:/t_3/app/src/main/res/drawable/ripple.xml" value="0.3828125" />
         <entry key="..\:/t_3/app/src/main/res/drawable/search_btn.xml" value="0.287109375" />
@@ -11,19 +12,25 @@
         <entry key="..\:/t_3/app/src/main/res/drawable/style_rating_bar_empty.xml" value="0.287109375" />
         <entry key="..\:/t_3/app/src/main/res/drawable/style_rating_bar_main.xml" value="0.287109375" />
         <entry key="..\:/t_3/app/src/main/res/drawable/view_holder_background.xml" value="0.287109375" />
+        <entry key="..\:/t_3/app/src/main/res/font/alegreya_sc.xml" value="0.20405405405405405" />
+        <entry key="..\:/t_3/app/src/main/res/font/frank_ruhl_libre_medium.xml" value="0.34324324324324323" />
         <entry key="..\:/t_3/app/src/main/res/layout-large/activity_main.xml" value="0.5" />
+        <entry key="..\:/t_3/app/src/main/res/layout-large/activity_main1.xml" value="0.55" />
         <entry key="..\:/t_3/app/src/main/res/layout-large/content_layout.xml" value="0.33" />
         <entry key="..\:/t_3/app/src/main/res/layout-large/splash_screen.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout-normal/activity_main.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout-normal/content_layout.xml" value="0.25" />
         <entry key="..\:/t_3/app/src/main/res/layout-normal/splash_screen.xml" value="0.25" />
+        <entry key="..\:/t_3/app/src/main/res/layout-normal/view_holder_tanks.xml" value="0.3171171171171171" />
         <entry key="..\:/t_3/app/src/main/res/layout-small/activity_main.xml" value="1.5" />
         <entry key="..\:/t_3/app/src/main/res/layout-small/content_layout.xml" value="1.1" />
         <entry key="..\:/t_3/app/src/main/res/layout-small/splash_screen.xml" value="1.5" />
         <entry key="..\:/t_3/app/src/main/res/layout-xlarge/activity_main.xml" value="0.34375" />
+        <entry key="..\:/t_3/app/src/main/res/layout-xlarge/activity_main1.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout-xlarge/content_layout.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout-xlarge/splash_screen.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/activity_main.xml" value="0.275" />
+        <entry key="..\:/t_3/app/src/main/res/layout/activity_main1.xml" value="0.3171171171171171" />
         <entry key="..\:/t_3/app/src/main/res/layout/content_layout.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/land_1.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/land_2.xml" value="0.275" />
@@ -35,7 +42,8 @@
         <entry key="..\:/t_3/app/src/main/res/layout/land_8.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/recyclerview_weapons.xml" value="0.275" />
         <entry key="..\:/t_3/app/src/main/res/layout/splash_screen.xml" value="0.33" />
-        <entry key="..\:/t_3/app/src/main/res/layout/view_holder.xml" value="0.33" />
+        <entry key="..\:/t_3/app/src/main/res/layout/view_holder.xml" value="0.67" />
+        <entry key="..\:/t_3/app/src/main/res/layout/view_holder_tanks.xml" value="0.3171171171171171" />
       </map>
     </option>
   </component>

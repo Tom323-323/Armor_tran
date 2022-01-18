@@ -2,6 +2,12 @@
 <resources>
     <string name="app_name">t_3</string>
     <string name="search_main">Поиск</string>
+    <string name="title_name">ТАНКИ</string>
+    <string name="test_text_tiger">The Tiger I (About this soundlisten (help·info)) was a German heavy tank of World War II that operated beginning in 1942 in Africa and in the Soviet Union, usually in independent heavy tank battalions.</string>
+    <string name="TEST_NAME_HOLDER">T I G E R T-VI</string>
+    <string name="text_holder_description">text_holder</string>
+    <string name="t_i_g_e_r_t_vi">T I G E R T - VI</string>
+    <string name="read_more">ЧИТАТЬ</string>
 
     <array name="splash_screen_text_content">
         <item>"Добрые люди в этом мире слишком недовольны друг другом, а мои изделия отлично их мирят"\n– Сэмюэл Кольт</item>

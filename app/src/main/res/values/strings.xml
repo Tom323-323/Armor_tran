@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">t_3</string>
     <string name="search_main">Search weapon...</string>
-
+    <string name="title_name">A R M O R</string>
+    <string name="test_text_tiger">The Tiger I (About this soundlisten (help·info)) was a German heavy tank of World War II that operated beginning in 1942 in Africa and in the Soviet Union, usually in independent heavy tank battalions.</string>
+    <string name="TEST_NAME_HOLDER">T I G E R T-VI</string>
+    <string name="text_holder_description">text_holder</string>
+    <string name="t_i_g_e_r_t_vi">T I G E R T - VI</string>
+    <string name="read_more">READ MORE</string>
 
     <array name="recycler_test">
         <item>name_weapons_1</item>
@@ -82,5 +87,11 @@
         <item>"... women tend to handle guns better than men when they stop listening to ridicule"\n– Christopher Bunch</item>
         <item>"Whatever happens, we have got\nThe Maxim gun, and they have not"\n– Hilaire Belloc</item>
     </array>
+
+
+
+
+
+
 
 </resources>
