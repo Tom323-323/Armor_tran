@@ -16,37 +16,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final Intent intent = new Intent (this,RecyclerActivity.class);
+        final Intent intent2 = new Intent (this,LandRV.class);
+
         imageView = findViewById(R.id.imgLandWeapons);
         imageView2 = findViewById(R.id.imageView1);
-        imageView.setOnClickListener(new View.OnClickListener() {
+
+        View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_click_img_land_main)); АНИМАЦИЯ КНОПКИ!!!!!
-                onClickImage();
+                switch (v.getId()) {
+                    case R.id.imgLandWeapons:
+                        i=1;
+                        intent.putExtra("index_main",i);
+                        startActivity (intent);
+                        break;
+                    case R.id.imageView1:
+                        i=2;
+                        intent2.putExtra("index_main",i);
+                        startActivity (intent2);
+                        break;
+                }
             }
-        });
-        imageView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_click_img_land_main)); АНИМАЦИЯ КНОПКИ!!!!!
-                onClickImage2();
-            }
-        });
-
-    }
-
-    public void onClickImage(){
-        Intent intent = new Intent (this,RecyclerActivity.class);
-        i=1;
-        intent.putExtra("index_main",i);
-        startActivity (intent);
-    }
-
-    public void onClickImage2(){
-        Intent intent = new Intent (this,LandRV.class);
-        i=2;
-        intent.putExtra("index_main",i);
-        startActivity (intent);
+        };
+        imageView.setOnClickListener(onClickListener);
+        imageView2.setOnClickListener(onClickListener);
     }
 
 }

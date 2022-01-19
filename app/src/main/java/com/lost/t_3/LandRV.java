@@ -48,20 +48,20 @@ public class LandRV extends AppCompatActivity {
                     //adapterRv = new AdapterRV(6);
 
             case 2://rvTanks.setAdapter(adapterRv2);
-                //adapterRv = new AdapterRV(6);
-                Toast.makeText(this, "index 2", Toast.LENGTH_SHORT).show();
+                //adapterRv2 = new AdapterRV(6);
+
             case 3://rvTanks.setAdapter(adapterRv3);
-                //adapterRv = new AdapterRV(6);
+                //adapterRv3 = new AdapterRV(6);
             case 4://rvTanks.setAdapter(adapterRv4);
-                //adapterRv = new AdapterRV(6);
+                //adapterRv4 = new AdapterRV(6);
             case 5://rvTanks.setAdapter(adapterRv5);
-                //adapterRv = new AdapterRV(6);
+                //adapterRv 5= new AdapterRV(6);
             case 6://rvTanks.setAdapter(adapterRv6);
-                //adapterRv = new AdapterRV(6);
+                //adapterRv6 = new AdapterRV(6);
             case 7://rvTanks.setAdapter(adapterRv7);
-               // adapterRv = new AdapterRV(6);
+               // adapterRv7 = new AdapterRV(6);
             case 8://rvTanks.setAdapter(adapterRv8);
-                // adapterRv = new AdapterRV(6);
+                // adapterRv8 = new AdapterRV(6);
         }
         rvTanks.setAdapter(adapterRv);
 
