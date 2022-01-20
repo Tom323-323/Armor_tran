@@ -1,6 +1,7 @@
 package com.lost.t_3;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,11 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
+
 
     private final int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
     List <LandContent> land_content_data;
@@ -21,6 +24,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
     public AdapterRV(List<LandContent> land_content_data, int numbers) {
         this.land_content_data = land_content_data;
         this.numbersHolder = numbers;
+
     }
 
     @NonNull
@@ -41,6 +45,8 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
         holder.img_land.setImageResource(content.getImg_land());
         holder.title_text.setText(content.getTitle_text());
         holder.content_text.setText(content.getContent_text());
+
+
     }
 
     @Override

@@ -34,7 +34,7 @@
                 android:layout_height="440dp"
                 android:contentDescription="@string/text_holder_description"
                 android:scaleType="centerCrop"
-                android:src="@drawable/tigr_1"
+
                 tools:ignore="MissingConstraints" />
 
             <TextView
@@ -44,8 +44,8 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="40dp"
-                android:fontFamily="@font/frank_ruhl_libre_medium"
-                android:text="@string/t_i_g_e_r_t_vi"
+                android:fontFamily="@font/cormorantsc_bold"
+
                 android:textSize="32sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -60,8 +60,8 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="40dp"
-                android:fontFamily="@font/frank_ruhl_libre_medium"
-                android:text="@string/test_text_tiger"
+                android:fontFamily="@font/cormorantsc_bold"
+
                 android:textColor="#455A64"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_title_holder"
