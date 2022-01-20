@@ -1,31 +1,22 @@
 package com.lost.t_3;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.bumptech.glide.load.resource.bitmap.CenterInside;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-
 import java.util.List;
 
 public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerView.MyViewHolder> {
 
    List <WeaponsContent> mdata;
 
-    Context context;
     WeaponsCallback callback;
 
     public AdapterRecyclerView(List<WeaponsContent> mdata, WeaponsCallback callback) {       // Добавить массивы с текстовыми и графическими данными в holder

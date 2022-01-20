@@ -39,7 +39,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                 />
 
             <TextView
                 android:id="@+id/tv_title_holder"
@@ -68,7 +68,6 @@
                 android:fontFamily="@font/frank_ruhl_libre_medium"
                 android:text="@string/test_text_tiger"
                 android:textColor="#455A64"
-
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_title_holder"
                 app:layout_constraintStart_toStartOf="@+id/tv_title_holder"
@@ -77,7 +76,6 @@
             <Button
                 android:id="@+id/btn_viewHolder"
                 android:layout_width="140dp"
-
                 android:layout_height="48dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp"

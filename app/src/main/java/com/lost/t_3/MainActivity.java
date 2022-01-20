@@ -1,16 +1,6 @@
 package com.lost.t_3;
 
-import static com.lost.t_3.R.id.imageView1;
-import static com.lost.t_3.R.id.imageView2;
-import static com.lost.t_3.R.id.imageView3;
-import static com.lost.t_3.R.id.imageView4;
-import static com.lost.t_3.R.id.imageView5;
-import static com.lost.t_3.R.id.imageView6;
-import static com.lost.t_3.R.id.imageView7;
-import static com.lost.t_3.R.id.imageView8;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -100,5 +90,10 @@ public class MainActivity extends AppCompatActivity {
         btn8.setOnClickListener(onClickListener);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
+    }
 
 }

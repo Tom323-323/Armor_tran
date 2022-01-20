@@ -1,6 +1,5 @@
 package com.lost.t_3;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -8,13 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,15 +19,18 @@ public class LandRV extends AppCompatActivity {
 
     private CardView mCardView;
     public int indexLand;
+    public String [] title_arr, content_arr;
 
     private RecyclerView rvTanks;
-    private AdapterRV adapterRv;
-    private List<LandContent> land_content_data;
+    List<LandContent> land_content_data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
+
+        title_arr = getResources().getStringArray(R.array.land_title);
+        content_arr = getResources().getStringArray(R.array.land_content);
 
         rvTanks = findViewById(R.id.rv_tanks);
 
@@ -38,48 +38,44 @@ public class LandRV extends AppCompatActivity {
         rvTanks.setLayoutManager(linerMang);
         rvTanks.setHasFixedSize(true);
 
+        land_content_data = new ArrayList<>();
+        AdapterRV adapterRv = new AdapterRV(land_content_data, 6);
 
         Intent intent = getIntent();
         indexLand = intent.getIntExtra("index_main", 1);
+
         switch (indexLand){
-            case 1:adapterRv = new AdapterRV(16);
+            case 1:
                 rvTanks.setAdapter(adapterRv);
                 setInitData1();
                 // ПРОПИСАТЬ ИЗМЕНЕНИЕ ИКОНКИ И НАЗВАНИЯ СТРАНЫ В TITLE
                 break;
             case 2:
                 setInitData2();
-                adapterRv = new AdapterRV(6);
                 rvTanks.setAdapter(adapterRv);
                 break;
             case 3:
                 setInitData3();
-                adapterRv = new AdapterRV(26);
                 rvTanks.setAdapter(adapterRv);
                 break;
             case 4:
                 setInitData4();
-                adapterRv = new AdapterRV(9);
                 rvTanks.setAdapter(adapterRv);
                 break;
             case 5:
                 setInitData5();
-                adapterRv = new AdapterRV(5);
                 rvTanks.setAdapter(adapterRv);
                 break;
             case 6:
                 setInitData6();
-                adapterRv = new AdapterRV(8);
                 rvTanks.setAdapter(adapterRv);
                 break;
             case 7:
                 setInitData7();
-                adapterRv = new AdapterRV(7);
                 rvTanks.setAdapter(adapterRv);
                 break;
             case 8:
                 setInitData8();
-                adapterRv = new AdapterRV(6);
                 rvTanks.setAdapter(adapterRv);
                 break;
         }
@@ -121,85 +117,82 @@ public class LandRV extends AppCompatActivity {
         //------------------------------------------------------------------------------------------------------------------------------------
     }
 
-
     public void setInitData1(){
-        land_content_data = new ArrayList<>();
-        land_content_data.add(new LandContent(R.string.land_title_1,R.string.land_content_1,R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(R.string.land_title_2,R.string.land_content_2,R.drawable.img_it_main));
-        land_content_data.add(new LandContent(R.string.land_title_3,R.string.land_content_3,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_4,R.string.land_content_4,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
+        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
     }
 
     public void setInitData2(){
-        land_content_data = new ArrayList<>();
-        land_content_data.add(new LandContent(R.string.land_title_1,R.string.land_content_1,R.drawable.img_it_main));
-        land_content_data.add(new LandContent(R.string.land_title_2,R.string.land_content_2,R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(R.string.land_title_3,R.string.land_content_3,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_4,R.string.land_content_4,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
+        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
     }
 
     public void setInitData3(){
-        land_content_data = new ArrayList<>();
-        land_content_data.add(new LandContent(R.string.land_title_1,R.string.land_content_1,R.drawable.img_soviet_main));
-        land_content_data.add(new LandContent(R.string.land_title_2,R.string.land_content_2,R.drawable.img_it_main));
-        land_content_data.add(new LandContent(R.string.land_title_3,R.string.land_content_3,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_4,R.string.land_content_4,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
+        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
     }
 
     public void setInitData4(){
-        land_content_data = new ArrayList<>();
-        land_content_data.add(new LandContent(R.string.land_title_1,R.string.land_content_1,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_2,R.string.land_content_2,R.drawable.img_it_main));
-        land_content_data.add(new LandContent(R.string.land_title_3,R.string.land_content_3,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_4,R.string.land_content_4,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
+        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
     }
 
     public void setInitData5(){
-        land_content_data = new ArrayList<>();
-        land_content_data.add(new LandContent(R.string.land_title_1,R.string.land_content_1,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_2,R.string.land_content_2,R.drawable.img_it_main));
-        land_content_data.add(new LandContent(R.string.land_title_3,R.string.land_content_3,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_4,R.string.land_content_4,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
+        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
     }
 
     public void setInitData6(){
-        land_content_data = new ArrayList<>();
-        land_content_data.add(new LandContent(R.string.land_title_1,R.string.land_content_1,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_2,R.string.land_content_2,R.drawable.img_it_main));
-        land_content_data.add(new LandContent(R.string.land_title_3,R.string.land_content_3,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_4,R.string.land_content_4,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
+        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
     }
 
     public void setInitData7(){
-        land_content_data = new ArrayList<>();
-        land_content_data.add(new LandContent(R.string.land_title_1,R.string.land_content_1,R.drawable.img_usa_main));
-        land_content_data.add(new LandContent(R.string.land_title_2,R.string.land_content_2,R.drawable.img_it_main));
-        land_content_data.add(new LandContent(R.string.land_title_3,R.string.land_content_3,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_4,R.string.land_content_4,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
+        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
     }
 
     public void setInitData8(){
-        land_content_data = new ArrayList<>();
-        land_content_data.add(new LandContent(R.string.land_title_1,R.string.land_content_1,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_2,R.string.land_content_2,R.drawable.img_it_main));
-        land_content_data.add(new LandContent(R.string.land_title_3,R.string.land_content_3,R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(R.string.land_title_4,R.string.land_content_4,R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
+        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
     }
 
 }

@@ -20,8 +20,6 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
     private AdapterRecyclerView adapterRv;
     private List<WeaponsContent> mdata;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +28,6 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
         initViews();
         initmdataWeapons();
         setupWeaponsAdapter();
-
     }
 
     private void initmdataWeapons() {

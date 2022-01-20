@@ -11,12 +11,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
 
     private final int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
+    List <LandContent> land_content_data;
 
-    public AdapterRV(int numbers) {
-        numbersHolder = numbers;
+    public AdapterRV(List<LandContent> land_content_data, int numbers) {
+        this.land_content_data = land_content_data;
+        this.numbersHolder = numbers;
     }
 
     @NonNull
@@ -32,8 +36,11 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Numberholder holder, int position) {   // ПЕРЕСОЗДАНИЕ ХОЛДЕРОВ С НОВЫМИ ЗНАЧЕНИЯМИ
-
+    public void onBindViewHolder(@NonNull Numberholder holder, int position) {
+        LandContent content = land_content_data.get(position);
+        holder.img_land.setImageResource(content.getImg_land());
+        holder.title_text.setText(content.getTitle_text());
+        holder.content_text.setText(content.getContent_text());
     }
 
     @Override
@@ -43,15 +50,15 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
 
     class Numberholder extends RecyclerView.ViewHolder {
 
-        TextView nameTanks, textTanks;
-        ImageView imgHolder;
-        Button btnHolder;
+        final TextView title_text, content_text;
+        final ImageView img_land;
+        final Button btnHolder;
 
         public Numberholder(@NonNull View itemView) {
             super(itemView);
-            nameTanks = itemView.findViewById(R.id.tv_title_holder);
-            textTanks = itemView.findViewById(R.id.tv_opisanie_holder);
-            imgHolder = itemView.findViewById(R.id.img_viewHolder);
+            title_text = itemView.findViewById(R.id.tv_title_holder);
+            content_text = itemView.findViewById(R.id.tv_opisanie_holder);
+            img_land = itemView.findViewById(R.id.img_viewHolder);
             btnHolder = itemView.findViewById(R.id.btn_viewHolder);
 
         }

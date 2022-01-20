@@ -5,9 +5,6 @@ public class LandContent {
     private String title_text, content_text;
     private int img_land;
 
-    public LandContent(int land_title_1, int land_content_1, int img_ger_main) {
-    }
-
     public String getTitle_text() {
         return title_text;
     }
