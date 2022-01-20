@@ -32,12 +32,6 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
     private List<WeaponsContent> mdata;
 
 
-//    String s1[], s2[];
-//    int image[] = {R.drawable.img_info_1,R.drawable.img_soviet_main,R.drawable.img_info_1,R.drawable.img_soviet_main,
-//            R.drawable.img_ger_main,R.drawable.img_info_1,R.drawable.img_ger_main,R.drawable.img_soviet_main,
-//            R.drawable.img_info_1,R.drawable.img_soviet_main,R.drawable.img_info_1,R.drawable.img_soviet_main,
-//            R.drawable.img_ger_main};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,10 +45,6 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
 //        s1 = getResources().getStringArray(R.array.recycler_test);
 //        s2 = getResources().getStringArray(R.array.recycler_test2);
 
-
-
-//        adapterRv = new AdapterRecyclerView(mdata);
-//        recyclerView.setAdapter(adapterRv);
 
 
     }

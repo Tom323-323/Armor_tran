@@ -11,12 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
+public class AdapterRV2 extends RecyclerView.Adapter<AdapterRV2.Numberholder>{
 
     private int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
 
-    public AdapterRV(int numbers) {
-
+    public AdapterRV2(int numbers) {
         numbersHolder = numbers;
     }
 

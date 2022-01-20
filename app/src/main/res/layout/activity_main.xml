@@ -88,24 +88,23 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imgLandWeapons"
+                        android:id="@+id/imageView1"
                         android:layout_width="match_parent"
                         android:layout_height="141dp"
                         android:layout_marginTop="20dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:background="@drawable/ripple"
-                        android:contentDescription="eng"
                         android:padding="10dp"
                         android:scaleType="centerCrop"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.931"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView3"
                         app:srcCompat="@drawable/img_main_gb" />
 
                     <ImageButton
-                        android:id="@+id/imageView1"
+                        android:id="@+id/imageView2"
                         android:layout_width="match_parent"
                         android:layout_height="141dp"
                         android:layout_marginTop="20dp"
@@ -127,7 +126,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageView4"
+                        android:id="@+id/imageView3"
                         android:layout_width="159dp"
                         android:layout_height="141dp"
                         android:layout_marginTop="32dp"
@@ -143,7 +142,7 @@
                         app:srcCompat="@drawable/img_main_ger" />
 
                     <ImageButton
-                        android:id="@+id/imageView3"
+                        android:id="@+id/imageView4"
                         android:layout_width="159dp"
                         android:layout_height="141dp"
                         android:layout_marginTop="32dp"
@@ -165,7 +164,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageView6"
+                        android:id="@+id/imageView5"
                         android:layout_width="159dp"
                         android:layout_height="141dp"
                         android:layout_marginTop="20dp"
@@ -181,7 +180,7 @@
                         app:srcCompat="@drawable/img_main_fin" />
 
                     <ImageButton
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageView6"
                         android:layout_width="159dp"
                         android:layout_height="141dp"
                         android:layout_marginTop="20dp"
@@ -204,7 +203,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageView8"
+                        android:id="@+id/imageView7"
                         android:layout_width="159dp"
                         android:layout_height="141dp"
                         android:layout_marginTop="24dp"
@@ -220,7 +219,7 @@
                         app:srcCompat="@drawable/img_main_ussr" />
 
                     <ImageButton
-                        android:id="@+id/imageView7"
+                        android:id="@+id/imageView8"
                         android:layout_width="159dp"
                         android:layout_height="141dp"
                         android:layout_marginTop="24dp"

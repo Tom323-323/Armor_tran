@@ -58,10 +58,6 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
                     .into(holder.image1);
 
 
-
-
-
-
     }
 
     @Override
