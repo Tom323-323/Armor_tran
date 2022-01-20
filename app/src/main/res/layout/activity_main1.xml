@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvTitleLandWeapons"
+        android:id="@+id/title_land"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
@@ -35,7 +35,7 @@
         android:layout_height="30dp"
         android:layout_marginEnd="24dp"
         android:contentDescription="german_flag"
-        android:src="@drawable/flag_german"
+
         app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
         app:layout_constraintEnd_toEndOf="@+id/toolbar3"
         app:layout_constraintTop_toTopOf="parent"

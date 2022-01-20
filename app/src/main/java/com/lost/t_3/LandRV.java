@@ -12,6 +12,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +22,7 @@ public class LandRV extends AppCompatActivity {
 
     private CardView mCardView;
     public int indexLand;
-    public String [] title_arr, content_arr;
+    public String [] title_arr, content_arr, land_arr;
 
     private RecyclerView rvTanks;
     List<LandContent> land_content_data;
@@ -31,8 +34,11 @@ public class LandRV extends AppCompatActivity {
 
         title_arr = getResources().getStringArray(R.array.land_title);
         content_arr = getResources().getStringArray(R.array.land_content);
+        land_arr = getResources().getStringArray(R.array.land_name_title);
 
         rvTanks = findViewById(R.id.rv_tanks);
+        TextView title_land = findViewById(R.id.title_land);
+        ImageView img_land_title = findViewById(R.id.imgLandWeapons);
 
         final LinearLayoutManager linerMang = new LinearLayoutManager(LandRV.this, LinearLayoutManager.HORIZONTAL, false); // создаем менеджер для отображения элементов в списке по горизонтали
         rvTanks.setLayoutManager(linerMang);
@@ -48,35 +54,51 @@ public class LandRV extends AppCompatActivity {
             case 1:
                 rvTanks.setAdapter(adapterRv);
                 setInitData1();
-                // ПРОПИСАТЬ ИЗМЕНЕНИЕ ИКОНКИ И НАЗВАНИЯ СТРАНЫ В TITLE
+                title_land.setText(land_arr[0]);
+                title_land.setTextSize(24);
+                img_land_title.setImageResource(R.drawable.img_main_gb);
                 break;
             case 2:
                 setInitData2();
                 rvTanks.setAdapter(adapterRv);
+                title_land.setText(land_arr[1]);
+                img_land_title.setImageResource(R.drawable.img_main_fr);
                 break;
             case 3:
                 setInitData3();
                 rvTanks.setAdapter(adapterRv);
+                title_land.setText(land_arr[2]);
+                img_land_title.setImageResource(R.drawable.img_main_ger);
                 break;
             case 4:
                 setInitData4();
                 rvTanks.setAdapter(adapterRv);
+                title_land.setText(land_arr[3]);
+                img_land_title.setImageResource(R.drawable.img_main_usa);
                 break;
             case 5:
                 setInitData5();
                 rvTanks.setAdapter(adapterRv);
+                title_land.setText(land_arr[4]);
+                img_land_title.setImageResource(R.drawable.img_main_fin);
                 break;
             case 6:
                 setInitData6();
                 rvTanks.setAdapter(adapterRv);
+                title_land.setText(land_arr[5]);
+                img_land_title.setImageResource(R.drawable.img_main_jp);
                 break;
             case 7:
                 setInitData7();
                 rvTanks.setAdapter(adapterRv);
+                title_land.setText(land_arr[6]);
+                img_land_title.setImageResource(R.drawable.img_main_ussr);
                 break;
             case 8:
                 setInitData8();
                 rvTanks.setAdapter(adapterRv);
+                title_land.setText(land_arr[7]);
+                img_land_title.setImageResource(R.drawable.img_main_ital);
                 break;
         }
 

@@ -9,8 +9,6 @@
     <string name="read_more">READ MORE</string>
 
 
-
-
     <array name="land_title">
         <item>Винтовки</item>
         <item>Пистолеты-пулеметы</item>
@@ -18,6 +16,17 @@
         <item>Пистолеты</item>
         <item>Противотанковые средства</item>
         <item>СЕКРЕТНЫЙ РАЗДЕЛ</item>
+    </array>
+
+    <array name="land_name_title">
+        <item>ВЕЛИКОБРИТАНИЯ</item>
+        <item>ФРАНЦИЯ</item>
+        <item>ГЕРМАНИЯ</item>
+        <item>США</item>
+        <item>ФИНЛЯНДИЯ</item>
+        <item>ЯПОНИЯ</item>
+        <item>РОССИЯ</item>
+        <item>ИТАЛИЯ</item>
     </array>
 
     <array name="land_content">
