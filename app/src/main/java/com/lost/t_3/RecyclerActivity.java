@@ -1,28 +1,17 @@
 package com.lost.t_3;
 
-//import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
-//import android.view.animation.AnimationUtils;
-//import android.view.animation.LayoutAnimationController;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-//import android.widget.RatingBar;
-//import android.widget.Toast;
-
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import androidx.core.util.Pair;
-
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,11 +30,6 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
         initViews();
         initmdataWeapons();
         setupWeaponsAdapter();
-
-//        s1 = getResources().getStringArray(R.array.recycler_test);
-//        s2 = getResources().getStringArray(R.array.recycler_test2);
-
-
 
     }
 

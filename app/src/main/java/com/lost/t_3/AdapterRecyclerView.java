@@ -25,11 +25,8 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
 
    List <WeaponsContent> mdata;
 
-
-
     Context context;
     WeaponsCallback callback;
-
 
     public AdapterRecyclerView(List<WeaponsContent> mdata, WeaponsCallback callback) {       // Добавить массивы с текстовыми и графическими данными в holder
        this.mdata = mdata;
@@ -56,7 +53,6 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
                     .load(mdata.get(position).getDrawableResourse())
                     .transforms(new CenterCrop(), new RoundedCorners(16))
                     .into(holder.image1);
-
 
     }
 

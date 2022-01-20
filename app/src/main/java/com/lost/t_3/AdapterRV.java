@@ -13,10 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
 
-    private int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
+    private final int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
 
     public AdapterRV(int numbers) {
-
         numbersHolder = numbers;
     }
 

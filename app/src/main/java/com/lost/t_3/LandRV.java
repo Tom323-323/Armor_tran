@@ -36,13 +36,9 @@ public class LandRV extends AppCompatActivity {
 
         final LinearLayoutManager linerMang = new LinearLayoutManager(LandRV.this, LinearLayoutManager.HORIZONTAL, false); // создаем менеджер для отображения элементов в списке по горизонтали
         rvTanks.setLayoutManager(linerMang);
-
-//        rvTanks.setHasFixedSize(true);// Оптимизируем список ограниченным количеством элементов
-
+        rvTanks.setHasFixedSize(true);
 
 
-        // adapterRv2 = new AdapterRV2(numbers:7) ....
-        // ИЗМЕНЯТЬ ЛОГИКУ АДАПТЕРОВ ДЛЯ ОДНОГО RECYCLER VIEW!!!!!!!
         Intent intent = getIntent();
         indexLand = intent.getIntExtra("index_main", 1);
         switch (indexLand){
@@ -50,7 +46,6 @@ public class LandRV extends AppCompatActivity {
                 rvTanks.setAdapter(adapterRv);
                 setInitData1();
                 // ПРОПИСАТЬ ИЗМЕНЕНИЕ ИКОНКИ И НАЗВАНИЯ СТРАНЫ В TITLE
-                //setInitData иницилизируем списки!!!!!!!!!!!!!!!!!!!!
                 break;
             case 2:
                 setInitData2();
@@ -88,7 +83,6 @@ public class LandRV extends AppCompatActivity {
                 rvTanks.setAdapter(adapterRv);
                 break;
         }
-
 
 
         //__________________________________________________________________________________________________________________________________
@@ -207,6 +201,5 @@ public class LandRV extends AppCompatActivity {
         land_content_data.add(new LandContent(R.string.land_title_5,R.string.land_content_5,R.drawable.img_jp_main));
         land_content_data.add(new LandContent(R.string.land_title_6,R.string.land_content_6,R.drawable.img_soviet_main));
     }
-
 
 }
