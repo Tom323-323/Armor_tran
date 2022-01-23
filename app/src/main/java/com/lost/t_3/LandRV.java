@@ -55,7 +55,7 @@ public class LandRV extends AppCompatActivity {
                 rvTanks.setAdapter(adapterRv);
                 setInitData1();
                 title_land.setText(land_arr[0]);
-                title_land.setTextSize(24);
+                title_land.setTextSize(22);
                 img_land_title.setImageResource(R.drawable.img_main_gb);
                 break;
             case 2:
