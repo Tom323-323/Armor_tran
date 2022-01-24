@@ -21,7 +21,7 @@ import java.util.List;
 public class LandRV extends AppCompatActivity {
 
     private CardView mCardView;
-    public int indexLand,i;
+    public int indexLand;
     public String [] title_arr, content_arr, land_arr;
 
     private RecyclerView rvTanks;

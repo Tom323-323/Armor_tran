@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void init(){
         final Intent intent = new Intent (this,LandRV.class);
-        final Intent intent2 = new Intent (this,RecyclerActivity.class);
+
 
         btn1 = findViewById(R.id.imageView1);
         btn2 = findViewById(R.id.imageView2);
@@ -51,49 +51,41 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.imageView1:
                         i=1;
                         intent.putExtra("index_main",i);
-                        intent2.putExtra("index_main",i);
                         startActivity (intent);
                         break;
                     case R.id.imageView2:
                         i=2;
                         intent.putExtra("index_main",i);
-                        intent2.putExtra("index_main",i);
                         startActivity (intent);
                         break;
                     case R.id.imageView3:
                         i=3;
                         intent.putExtra("index_main",i);
-                        intent2.putExtra("index_main",i);
                         startActivity (intent);
                         break;
                     case R.id.imageView4:
                         i=4;
                         intent.putExtra("index_main",i);
-                        intent2.putExtra("index_main",i);
                         startActivity (intent);
                         break;
                     case R.id.imageView5:
                         i=5;
                         intent.putExtra("index_main",i);
-                        intent2.putExtra("index_main",i);
                         startActivity (intent);
                         break;
                     case R.id.imageView6:
                         i=6;
                         intent.putExtra("index_main",i);
-                        intent2.putExtra("index_main",i);
                         startActivity (intent);
                         break;
                     case R.id.imageView7:
                         i=7;
                         intent.putExtra("index_main",i);
-                        intent2.putExtra("index_main",i);
                         startActivity (intent);
                         break;
                     case R.id.imageView8:
                         i=8;
                         intent.putExtra("index_main",i);
-                        intent2.putExtra("index_main",i);
                         startActivity (intent);
                         break;
                 }
