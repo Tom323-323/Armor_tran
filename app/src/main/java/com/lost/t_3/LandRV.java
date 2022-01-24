@@ -21,7 +21,7 @@ import java.util.List;
 public class LandRV extends AppCompatActivity {
 
     private CardView mCardView;
-    public int indexLand;
+    public int indexLand,i;
     public String [] title_arr, content_arr, land_arr;
 
     private RecyclerView rvTanks;
@@ -50,6 +50,7 @@ public class LandRV extends AppCompatActivity {
         Intent intent = getIntent();
         indexLand = intent.getIntExtra("index_main", 1);
 
+
         switch (indexLand){
             case 1:
                 rvTanks.setAdapter(adapterRv);
@@ -57,6 +58,7 @@ public class LandRV extends AppCompatActivity {
                 title_land.setText(land_arr[0]);
                 title_land.setTextSize(22);
                 img_land_title.setImageResource(R.drawable.img_main_gb);
+
                 break;
             case 2:
                 setInitData2();

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
@@ -20,6 +22,7 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
     private AdapterRecyclerView adapterRv;
     private List<WeaponsContent> mdata;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,13 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
         initViews();
         initmdataWeapons();
         setupWeaponsAdapter();
+
+        Intent intent = getIntent();
+
+
+        int n = intent.getIntExtra("typeWeapons",1);
+        Toast.makeText(this, "clicked__"+n, Toast.LENGTH_SHORT).show();
+
     }
 
     private void initmdataWeapons() {
@@ -71,7 +81,6 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
         Pair<View,String> p1 = Pair.create((View)imgBackgr,"background");
         Pair<View,String> p2 = Pair.create((View)imgWeapons,"image_gun");
         Pair<View,String> p3 = Pair.create((View)nameWeapons,"name_gun");
-
 
         ActivityOptionsCompat optionsCompat =
                 ActivityOptionsCompat.makeSceneTransitionAnimation(this,p1,p2,p3);

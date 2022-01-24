@@ -1,8 +1,8 @@
 package com.lost.t_3;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -23,6 +22,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
 
     private final int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
     List <LandContent> land_content_data;
+    public int n;
 
     public AdapterRV(List<LandContent> land_content_data, int numbers) {
         this.land_content_data = land_content_data;
@@ -43,19 +43,49 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Numberholder holder, int position) {
-        LandContent content = land_content_data.get(position);
+    public void onBindViewHolder(@NonNull final Numberholder holder, @SuppressLint("RecyclerView") final int position) {
+        final LandContent content = land_content_data.get(position);
         holder.img_land.setImageResource(content.getImg_land());
         holder.title_text.setText(content.getTitle_text());
         holder.content_text.setText(content.getContent_text());
         holder.btnHolder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("MyLog", "click lllllllllllllll");
+                Intent intent = new Intent(v.getContext(),RecyclerActivity.class);
+                switch (position){
+                    case 0:
+                        n=1;
+                        intent.putExtra("typeWeapons", n);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 1:
+                        n=2;
+                        intent.putExtra("typeWeapons", n);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 2:
+                        n=3;
+                        intent.putExtra("typeWeapons", n);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 3:
+                        n=4;
+                        intent.putExtra("typeWeapons", n);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 4:
+                        n=5;
+                        intent.putExtra("typeWeapons", n);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 5:
+                        n=6;
+                        intent.putExtra("typeWeapons", n);
+                        v.getContext().startActivity(intent);
+                        break;
+                }
             }
         });
-
-
     }
 
     @Override
@@ -76,43 +106,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
             img_land = itemView.findViewById(R.id.img_viewHolder);
             btnHolder = itemView.findViewById(R.id.btn_viewHolder);
 
-        }
 
-//        @Override
-//        public void onClick(View v) {
-//            int position = getAdapterPosition();
-//            if(position != RecyclerView.NO_POSITION)btnClickLand (position);
-//        }
-//
-//        private void btnClickLand(int position) {
-//            Intent intent = new Intent(itemView.getContext(), RecyclerActivity.class);
-//            switch (position){
-//                case 0:
-//                    itemView.getContext().startActivity(intent);
-//                    Toast.makeText(itemView.getContext(), "111111", Toast.LENGTH_SHORT).show();
-//                    break;
-//                case 1:
-//                    itemView.getContext().startActivity(intent);
-//                    Toast.makeText(itemView.getContext(), "2222", Toast.LENGTH_SHORT).show();
-//                    break;
-//                case 2:
-//                    itemView.getContext().startActivity(intent);
-//                    Toast.makeText(itemView.getContext(), "333333", Toast.LENGTH_SHORT).show();
-//                    break;
-//                case 3:
-//                    itemView.getContext().startActivity(intent);
-//                    Toast.makeText(itemView.getContext(), "44444", Toast.LENGTH_SHORT).show();
-//                    break;
-//                case 4:
-//                    Toast.makeText(itemView.getContext(), "5555", Toast.LENGTH_SHORT).show();
-//                    itemView.getContext().startActivity(intent);
-//                    break;
-//                case 5:
-//                    Toast.makeText(itemView.getContext(), "6666", Toast.LENGTH_SHORT).show();
-//                    itemView.getContext().startActivity(intent);
-//                    break;
-//
-//            }
-//        }
+        }
     }
 }
