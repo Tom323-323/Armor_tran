@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int i;
+
     public ImageButton btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
 
     @Override
@@ -49,43 +49,43 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.imageView1:
-                        i=1;
-                        intent.putExtra("index_main",i);
+
+                        intent.putExtra("index_main",1);
                         startActivity (intent);
                         break;
                     case R.id.imageView2:
-                        i=2;
-                        intent.putExtra("index_main",i);
+
+                        intent.putExtra("index_main",2);
                         startActivity (intent);
                         break;
                     case R.id.imageView3:
-                        i=3;
-                        intent.putExtra("index_main",i);
+
+                        intent.putExtra("index_main",3);
                         startActivity (intent);
                         break;
                     case R.id.imageView4:
-                        i=4;
-                        intent.putExtra("index_main",i);
+
+                        intent.putExtra("index_main",4);
                         startActivity (intent);
                         break;
                     case R.id.imageView5:
-                        i=5;
-                        intent.putExtra("index_main",i);
+
+                        intent.putExtra("index_main",5);
                         startActivity (intent);
                         break;
                     case R.id.imageView6:
-                        i=6;
-                        intent.putExtra("index_main",i);
+
+                        intent.putExtra("index_main",6);
                         startActivity (intent);
                         break;
                     case R.id.imageView7:
-                        i=7;
-                        intent.putExtra("index_main",i);
+
+                        intent.putExtra("index_main",7);
                         startActivity (intent);
                         break;
                     case R.id.imageView8:
-                        i=8;
-                        intent.putExtra("index_main",i);
+
+                        intent.putExtra("index_main",8);
                         startActivity (intent);
                         break;
                 }
