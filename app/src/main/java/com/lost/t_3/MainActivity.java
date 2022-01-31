@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.imageView1:
-
                         intent.putExtra("index_main",1);
                         startActivity (intent);
+
                         break;
                     case R.id.imageView2:
 

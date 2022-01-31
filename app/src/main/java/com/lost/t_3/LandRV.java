@@ -36,76 +36,38 @@ public class LandRV extends AppCompatActivity {
         content_arr = getResources().getStringArray(R.array.land_content);
         land_arr = getResources().getStringArray(R.array.land_name_title);
 
-        rvTanks = findViewById(R.id.rv_tanks);
+        final int[] image_arr ={R.drawable.img_main_gb,R.drawable.img_main_fr,R.drawable.img_main_ger,R.drawable.img_main_usa,R.drawable.img_main_fin,
+                R.drawable.img_main_jp,R.drawable.img_main_ussr,R.drawable.img_main_ital};
         TextView title_land = findViewById(R.id.title_land);
         ImageView img_land_title = findViewById(R.id.imgLandWeapons);
-
-        final LinearLayoutManager linerMang = new LinearLayoutManager(LandRV.this, LinearLayoutManager.HORIZONTAL, false); // создаем менеджер для отображения элементов в списке по горизонтали
-        rvTanks.setLayoutManager(linerMang);
-        rvTanks.setHasFixedSize(true);
-
-        land_content_data = new ArrayList<>();
-        AdapterRV adapterRv = new AdapterRV(land_content_data, 6);
 
         Intent intent = getIntent();
         indexLand = intent.getIntExtra("index_main", 1);
 
 
-        switch (indexLand){
-            case 1:
-                rvTanks.setAdapter(adapterRv);
-                setInitData1();
-                title_land.setText(land_arr[0]);
-                title_land.setTextSize(22);
-                img_land_title.setImageResource(R.drawable.img_main_gb);
-
-                break;
-            case 2:
-                setInitData2();
-                rvTanks.setAdapter(adapterRv);
-                title_land.setText(land_arr[1]);
-                img_land_title.setImageResource(R.drawable.img_main_fr);
-                break;
-            case 3:
-                setInitData3();
-                rvTanks.setAdapter(adapterRv);
-                title_land.setText(land_arr[2]);
-                img_land_title.setImageResource(R.drawable.img_main_ger);
-                break;
-            case 4:
-                setInitData4();
-                rvTanks.setAdapter(adapterRv);
-                title_land.setText(land_arr[3]);
-                img_land_title.setImageResource(R.drawable.img_main_usa);
-                break;
-            case 5:
-                setInitData5();
-                rvTanks.setAdapter(adapterRv);
-                title_land.setText(land_arr[4]);
-                img_land_title.setImageResource(R.drawable.img_main_fin);
-                break;
-            case 6:
-                setInitData6();
-                rvTanks.setAdapter(adapterRv);
-                title_land.setText(land_arr[5]);
-                img_land_title.setImageResource(R.drawable.img_main_jp);
-                break;
-            case 7:
-                setInitData7();
-                rvTanks.setAdapter(adapterRv);
-                title_land.setText(land_arr[6]);
-                img_land_title.setImageResource(R.drawable.img_main_ussr);
-                break;
-            case 8:
-                setInitData8();
-                rvTanks.setAdapter(adapterRv);
-                title_land.setText(land_arr[7]);
-                img_land_title.setImageResource(R.drawable.img_main_ital);
-                break;
+        if(indexLand==1){
+            setInitData(indexLand);
+            title_land.setText(land_arr[indexLand]);
+            title_land.setTextSize(22);
+            img_land_title.setImageResource(R.drawable.img_main_gb);
+        } else{
+            setInitData(indexLand);
+            title_land.setText(land_arr[indexLand]);
+            img_land_title.setImageResource(image_arr[indexLand]);
         }
 
 
-        //__________________________________________________________________________________________________________________________________
+
+        rvTanks = findViewById(R.id.rv_tanks);
+        final LinearLayoutManager linerMang = new LinearLayoutManager(LandRV.this, LinearLayoutManager.HORIZONTAL, false); // создаем менеджер для отображения элементов в списке по горизонтали
+        rvTanks.setLayoutManager(linerMang);
+        rvTanks.setHasFixedSize(true);
+
+
+
+        AdapterRV adapterRv = new AdapterRV(land_content_data, 6);
+        rvTanks.setAdapter(adapterRv);
+
         rvTanks.setPadding(110,0,110,0);
         final SnapHelper shapHelper = new LinearSnapHelper();
         shapHelper.attachToRecyclerView(rvTanks);
@@ -138,79 +100,71 @@ public class LandRV extends AppCompatActivity {
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
-        //------------------------------------------------------------------------------------------------------------------------------------
+
     }
 
-    public void setInitData1(){
-        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
-        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
-    }
+    public void setInitData(int i){
+        land_content_data = new ArrayList<>();
+        switch (i){
+            case 1:
+                land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+                land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+                land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+                land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+                land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+                land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
+            case 2:
+                land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+                land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+                land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+                land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+                land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+                land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
+            case 3:
+                land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+                land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+                land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+                land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+                land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+                land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
+            case 4:
+                land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+                land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+                land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+                land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+                land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+                land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
+            case 5:
+                land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+                land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+                land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+                land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+                land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+                land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
+            case 6:
+                land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+                land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+                land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+                land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+                land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+                land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
+            case 7:
+                land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+                land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+                land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+                land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+                land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+                land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
+            case 8:
+                land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
+                land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
+                land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
+                land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
+                land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
+                land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
 
-    public void setInitData2(){
-        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
-        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
-    }
+        }
 
-    public void setInitData3(){
-        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
-        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
-    }
-
-    public void setInitData4(){
-        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
-        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
-    }
-
-    public void setInitData5(){
-        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
-        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
-    }
-
-    public void setInitData6(){
-        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
-        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
-    }
-
-    public void setInitData7(){
-        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
-        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
-    }
-
-    public void setInitData8(){
-        land_content_data.add(new LandContent(title_arr[0], content_arr[0],R.drawable.img_ger_main));
-        land_content_data.add(new LandContent(title_arr[1],content_arr[1],R.drawable.img_it_main));
-        land_content_data.add(new LandContent(title_arr[2],content_arr[2],R.drawable.img_fr_main));
-        land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
-        land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
-        land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
     }
 
     @Override

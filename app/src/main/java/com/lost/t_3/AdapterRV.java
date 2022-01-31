@@ -49,38 +49,9 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),RecyclerActivity.class);
-                switch (position){
-                    case 0:
-                        n=1;
-                        intent.putExtra("typeWeapons", n);
-                        v.getContext().startActivity(intent);
-                        break;
-                    case 1:
-                        n=2;
-                        intent.putExtra("typeWeapons", n);
-                        v.getContext().startActivity(intent);
-                        break;
-                    case 2:
-                        n=3;
-                        intent.putExtra("typeWeapons", n);
-                        v.getContext().startActivity(intent);
-                        break;
-                    case 3:
-                        n=4;
-                        intent.putExtra("typeWeapons", n);
-                        v.getContext().startActivity(intent);
-                        break;
-                    case 4:
-                        n=5;
-                        intent.putExtra("typeWeapons", n);
-                        v.getContext().startActivity(intent);
-                        break;
-                    case 5:
-                        n=6;
-                        intent.putExtra("typeWeapons", n);
-                        v.getContext().startActivity(intent);
-                        break;
-                }
+                intent.putExtra("typeWeapons", position);
+                v.getContext().startActivity(intent);
+
             }
         });
     }
