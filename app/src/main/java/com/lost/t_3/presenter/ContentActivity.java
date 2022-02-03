@@ -1,4 +1,4 @@
-package com.lost.t_3;
+package com.lost.t_3.presenter;
 
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.lost.t_3.R;
+import com.lost.t_3.domain.WeaponsContent;
 
 public class ContentActivity  extends AppCompatActivity {
 

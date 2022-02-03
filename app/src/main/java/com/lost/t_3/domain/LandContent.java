@@ -1,4 +1,4 @@
-package com.lost.t_3;
+package com.lost.t_3.domain;
 
 public class LandContent {
 

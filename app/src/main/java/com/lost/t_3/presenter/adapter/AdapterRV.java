@@ -1,8 +1,9 @@
-package com.lost.t_3;
+package com.lost.t_3.presenter.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.lost.t_3.domain.LandContent;
+import com.lost.t_3.R;
+import com.lost.t_3.presenter.RecyclerActivity;
+
 import java.util.List;
 
 public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
@@ -19,7 +24,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
 
     private final int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
     List <LandContent> land_content_data;
-    public int n, indexLand;
+    public int indexLand = 12;
 
     public AdapterRV(List<LandContent> land_content_data, int numbers) {
         this.land_content_data = land_content_data;
@@ -35,6 +40,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(layoutMaketHolder, parent, false); // СОЗДАНЕНИЕ VIEW ДЛЯ ПОСЛЕДУЮЩЕГО ПОМЕЩЕНИЯ ЕГО В ОБЪЕКТ NUMBERHOLDER
         Numberholder holder = new Numberholder(view);
+
         return holder;
 
     }
@@ -48,8 +54,9 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
         holder.btnHolder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),RecyclerActivity.class);
-                intent.putExtra("typeWeapons", position);
+                Intent intent = new Intent(v.getContext(), RecyclerActivity.class);
+                intent.putExtra("typeWeapons", indexLand);
+                Log.d("ADD", String.valueOf(indexLand));
                 v.getContext().startActivity(intent);
 
             }

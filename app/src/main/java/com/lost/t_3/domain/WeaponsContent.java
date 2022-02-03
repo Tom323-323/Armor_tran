@@ -1,4 +1,4 @@
-package com.lost.t_3;
+package com.lost.t_3.domain;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.lost.t_3;
+package com.lost.t_3.presenter;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,10 +10,15 @@ import androidx.recyclerview.widget.SnapHelper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.lost.t_3.domain.LandContent;
+import com.lost.t_3.R;
+import com.lost.t_3.presenter.adapter.AdapterRV;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +41,7 @@ public class LandRV extends AppCompatActivity {
         content_arr = getResources().getStringArray(R.array.land_content);
         land_arr = getResources().getStringArray(R.array.land_name_title);
 
-        final int[] image_arr ={R.drawable.img_main_gb,R.drawable.img_main_fr,R.drawable.img_main_ger,R.drawable.img_main_usa,R.drawable.img_main_fin,
+        final int[] image_arr ={R.drawable.img_main_gb,R.drawable.img_main_gb,R.drawable.img_main_fr,R.drawable.img_main_ger,R.drawable.img_main_usa,R.drawable.img_main_fin,
                 R.drawable.img_main_jp,R.drawable.img_main_ussr,R.drawable.img_main_ital};
         TextView title_land = findViewById(R.id.title_land);
         ImageView img_land_title = findViewById(R.id.imgLandWeapons);
@@ -56,17 +61,15 @@ public class LandRV extends AppCompatActivity {
             img_land_title.setImageResource(image_arr[indexLand]);
         }
 
-
-
         rvTanks = findViewById(R.id.rv_tanks);
         final LinearLayoutManager linerMang = new LinearLayoutManager(LandRV.this, LinearLayoutManager.HORIZONTAL, false); // создаем менеджер для отображения элементов в списке по горизонтали
         rvTanks.setLayoutManager(linerMang);
         rvTanks.setHasFixedSize(true);
 
-
-
         AdapterRV adapterRv = new AdapterRV(land_content_data, 6);
         rvTanks.setAdapter(adapterRv);
+
+
 
         rvTanks.setPadding(110,0,110,0);
         final SnapHelper shapHelper = new LinearSnapHelper();

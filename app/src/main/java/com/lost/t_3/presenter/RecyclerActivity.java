@@ -1,4 +1,4 @@
-package com.lost.t_3;
+package com.lost.t_3.presenter;
 
 import android.content.Intent;
 import android.os.Build;
@@ -13,10 +13,16 @@ import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.core.util.Pair;
+
+import com.lost.t_3.R;
+import com.lost.t_3.domain.WeaponsCallback;
+import com.lost.t_3.domain.WeaponsContent;
+import com.lost.t_3.presenter.adapter.AdapterRecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerActivity extends AppCompatActivity implements WeaponsCallback{
+public class RecyclerActivity extends AppCompatActivity implements WeaponsCallback {
     private RecyclerView recyclerView;
     private AdapterRecyclerView adapterRv;
     private List<WeaponsContent> mdata;

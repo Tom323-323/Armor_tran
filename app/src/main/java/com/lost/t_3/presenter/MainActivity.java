@@ -1,11 +1,14 @@
-package com.lost.t_3;
+package com.lost.t_3.presenter;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.lost.t_3.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void init(){
-        final Intent intent = new Intent (this,LandRV.class);
+        final Intent intent = new Intent (this, LandRV.class);
 
 
         btn1 = findViewById(R.id.imageView1);
@@ -51,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.imageView1:
                         intent.putExtra("index_main",1);
                         startActivity (intent);
-
                         break;
                     case R.id.imageView2:
 

@@ -10,24 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".RecyclerActivity">
+        <activity android:name=".presenter.RecyclerActivity">
 
         </activity>
 
-        <activity android:name=".ContentActivity">
+        <activity android:name=".presenter.ContentActivity">
 
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".presenter.MainActivity">
 
         </activity>
 
-        <activity android:name=".LandRV">
+        <activity android:name=".presenter.LandRV">
 
         </activity>
 
 
-        <activity android:name=".SplashScreen"
+        <activity android:name=".presenter.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

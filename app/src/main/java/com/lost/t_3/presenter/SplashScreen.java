@@ -1,4 +1,4 @@
-package com.lost.t_3;
+package com.lost.t_3.presenter;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +8,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import com.lost.t_3.R;
 import java.util.Random;
 
 public class SplashScreen extends AppCompatActivity {
 
     public TextView text_content;
-    private ConstraintLayout splashScreen;
     Random random1;
     public int textLenght;
     public String[] textContent;
@@ -40,7 +39,6 @@ public class SplashScreen extends AppCompatActivity {
 
     public void init(){
         text_content = findViewById(R.id.tv_content_splash);
-        splashScreen = findViewById(R.id.splash_screen);
 
         // Установка рандомной цитаты
         textContent = getResources().getStringArray(R.array.splash_screen_text_content);
@@ -49,12 +47,6 @@ public class SplashScreen extends AppCompatActivity {
         int i = random1.nextInt(textLenght);
         text_content.setText(textContent[i]);
 
-        // Массив изображения фона
-//        imageContent = new int[]{(R.drawable.img_it_main), (R.drawable.img_jp_main), (R.drawable.img_main_ger), (R.drawable.img_fr_main), (R.drawable.img_main_fin)};
-//        imageLenght = imageContent.length;
-//        random = new Random();
-//        int r = random.nextInt(imageLenght);
-//        splashScreen.setBackgroundResource(imageContent[r]);
     }
 
     @Override
@@ -82,7 +74,7 @@ public class SplashScreen extends AppCompatActivity {
                 try {Thread.sleep(4500);} catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                Intent i = new Intent(SplashScreen.this,MainActivity.class);
+                Intent i = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(i);
             }
         }).start();
