@@ -38,8 +38,6 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
         setupWeaponsAdapter();
 
         Intent intent = getIntent();
-
-
         int n = intent.getIntExtra("typeWeapons",1);
         Toast.makeText(this, "clicked__"+n, Toast.LENGTH_SHORT).show();
 

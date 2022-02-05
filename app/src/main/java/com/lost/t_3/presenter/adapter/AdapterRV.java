@@ -12,11 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.lost.t_3.domain.LandContent;
 import com.lost.t_3.R;
 import com.lost.t_3.presenter.RecyclerActivity;
-
 import java.util.List;
 
 public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
@@ -24,12 +22,12 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
 
     private final int numbersHolder; // КОЛИЧЕСВТО ЭЛЕМЕНТОВ В СПИСКЕ - КОНЕЧНОЕ ЗНАЧЕНИЕ (50 ТАНКОВ, 45 САМОХОДОК, 30 ЗЕНИТОК... И Т.Д.)
     List <LandContent> land_content_data;
-    public int indexLand = 12;
+
+    public int indexLand;
 
     public AdapterRV(List<LandContent> land_content_data, int numbers) {
         this.land_content_data = land_content_data;
         this.numbersHolder = numbers;
-
     }
 
     @NonNull
@@ -39,11 +37,9 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
         int layoutMaketHolder = R.layout.view_holder_tanks; // НАХОДИМ МАКЕТ ХОЛДЕРА
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(layoutMaketHolder, parent, false); // СОЗДАНЕНИЕ VIEW ДЛЯ ПОСЛЕДУЮЩЕГО ПОМЕЩЕНИЯ ЕГО В ОБЪЕКТ NUMBERHOLDER
-        Numberholder holder = new Numberholder(view);
-
-        return holder;
-
+        return new Numberholder(view);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull final Numberholder holder, @SuppressLint("RecyclerView") final int position) {
@@ -54,11 +50,11 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
         holder.btnHolder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(v.getContext(), RecyclerActivity.class);
                 intent.putExtra("typeWeapons", indexLand);
                 Log.d("ADD", String.valueOf(indexLand));
                 v.getContext().startActivity(intent);
-
             }
         });
     }
@@ -68,7 +64,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
         return numbersHolder;
     }
 
-    class Numberholder extends RecyclerView.ViewHolder{
+    static class Numberholder extends RecyclerView.ViewHolder{
 
         final TextView title_text, content_text;
         final ImageView img_land;
@@ -80,7 +76,6 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
             content_text = itemView.findViewById(R.id.tv_opisanie_holder);
             img_land = itemView.findViewById(R.id.img_viewHolder);
             btnHolder = itemView.findViewById(R.id.btn_viewHolder);
-
 
         }
     }

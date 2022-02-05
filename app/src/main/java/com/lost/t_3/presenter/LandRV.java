@@ -10,16 +10,13 @@ import androidx.recyclerview.widget.SnapHelper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.lost.t_3.domain.LandContent;
 import com.lost.t_3.R;
 import com.lost.t_3.presenter.adapter.AdapterRV;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +25,9 @@ public class LandRV extends AppCompatActivity {
     private CardView mCardView;
     public int indexLand;
     public String [] title_arr, content_arr, land_arr;
-
+    public TextView title_land;
     private RecyclerView rvTanks;
+    ImageView img_land_title;
     List<LandContent> land_content_data;
 
     @Override
@@ -43,8 +41,8 @@ public class LandRV extends AppCompatActivity {
 
         final int[] image_arr ={R.drawable.img_main_gb,R.drawable.img_main_gb,R.drawable.img_main_fr,R.drawable.img_main_ger,R.drawable.img_main_usa,R.drawable.img_main_fin,
                 R.drawable.img_main_jp,R.drawable.img_main_ussr,R.drawable.img_main_ital};
-        TextView title_land = findViewById(R.id.title_land);
-        ImageView img_land_title = findViewById(R.id.imgLandWeapons);
+        title_land = findViewById(R.id.title_land);
+        img_land_title = findViewById(R.id.imgLandWeapons);
 
         Intent intent = getIntent();
         indexLand = intent.getIntExtra("index_main", 1);
@@ -103,8 +101,9 @@ public class LandRV extends AppCompatActivity {
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
-
     }
+
+
 
     public void setInitData(int i){
         land_content_data = new ArrayList<>();

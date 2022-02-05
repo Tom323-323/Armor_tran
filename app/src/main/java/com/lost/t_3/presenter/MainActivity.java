@@ -56,37 +56,30 @@ public class MainActivity extends AppCompatActivity {
                         startActivity (intent);
                         break;
                     case R.id.imageView2:
-
                         intent.putExtra("index_main",2);
                         startActivity (intent);
                         break;
                     case R.id.imageView3:
-
                         intent.putExtra("index_main",3);
                         startActivity (intent);
                         break;
                     case R.id.imageView4:
-
                         intent.putExtra("index_main",4);
                         startActivity (intent);
                         break;
                     case R.id.imageView5:
-
                         intent.putExtra("index_main",5);
                         startActivity (intent);
                         break;
                     case R.id.imageView6:
-
                         intent.putExtra("index_main",6);
                         startActivity (intent);
                         break;
                     case R.id.imageView7:
-
                         intent.putExtra("index_main",7);
                         startActivity (intent);
                         break;
                     case R.id.imageView8:
-
                         intent.putExtra("index_main",8);
                         startActivity (intent);
                         break;
@@ -108,5 +101,4 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         finish();
     }
-
 }
