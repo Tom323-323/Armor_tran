@@ -55,6 +55,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.Numberholder>{
                 intent.putExtra("typeWeapons", indexLand);
                 Log.d("ADD", String.valueOf(indexLand));
                 v.getContext().startActivity(intent);
+
             }
         });
     }

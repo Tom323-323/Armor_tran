@@ -164,7 +164,6 @@ public class LandRV extends AppCompatActivity {
                 land_content_data.add(new LandContent(title_arr[3],content_arr[3],R.drawable.img_gb_main));
                 land_content_data.add(new LandContent(title_arr[4],content_arr[4],R.drawable.img_jp_main));
                 land_content_data.add(new LandContent(title_arr[5],content_arr[5],R.drawable.img_soviet_main));
-
         }
 
     }

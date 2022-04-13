@@ -89,6 +89,7 @@ public class RecyclerActivity extends AppCompatActivity implements WeaponsCallba
                 ActivityOptionsCompat.makeSceneTransitionAnimation(this,p1,p2,p3);
 
         startActivity(intent, optionsCompat.toBundle());
+        finish();
 
     }
 }
